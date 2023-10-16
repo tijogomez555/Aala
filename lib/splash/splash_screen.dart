@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void _navigateToMainScreen() async {
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 4));
     Navigator.pushReplacementNamed(context, '/main');
   }
 
@@ -22,10 +23,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: Image.asset('assets/images/inapp_logo.png', fit: BoxFit.fill),
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Lottie.asset('assets/images/aala2_splash.json'),
         ),
       ),
     );
