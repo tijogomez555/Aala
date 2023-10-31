@@ -1,4 +1,4 @@
-class TextWidgets {
+class Strings {
   static const String welcomeMessage = 'Welcome to Aala';
   static const String welcomeMessageDescription =
       'Sign in with your InApp account to continue';
